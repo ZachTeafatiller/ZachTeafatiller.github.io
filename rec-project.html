@@ -161,17 +161,27 @@
             right: -12px;
         }
 
-        .card img {
+        .award img {
             width: 100%;
-            max-width: 100%;
-            height: 220px;
+            height: auto;              /* 🔥 lets it scale naturally */
+            max-height: 500px;         /* optional cap */
             object-fit: contain;
 
+            display: block;
+            margin: 0 auto 1.5rem auto;
+
+            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .slide video {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
             background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
             padding: 10px;
             border-radius: 10px;
-
-            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -220,9 +230,8 @@
                 <ul>
                     <li>Modified and designed parts witin an 800+ component assembly</li>
                     <li>Scissor lift and structural design</li>
-                    <li>Control panel design & fabrication</li>
+                    <li>Control panel box design & fabrication</li>
                     <li>Ride assembly and troubleshooting</li>
-                    <li>Fabrication of scissor lift and control panel parts</li>
                     <li>Laser cut and engraved information plates to be mounted to ride and control panel</li>
                 </ul>
             </div>
@@ -243,6 +252,17 @@
                         <div class="caption">
                             <h3>Final Show Build</h3>
                             <p>Fully themed ride assembled for competition showcasing motion, lighting, and structural integration.</p>
+                        </div>
+                    </div>
+
+                    <div class="slide">
+                        <video controls id="demo-video">
+                            <source src="images/rec2600.mp4" type="video/mp4">
+                        </video>
+
+                        <div class="caption">
+                            <h3>Ride Motion Demonstration</h3>
+                            <p>Full operational test showing rotation and vertical displacement during continuous operation.</p>
                         </div>
                     </div>
 
@@ -290,27 +310,31 @@
             <div class="column card">
                 <h2>Challenges</h2>
                 <p>
-                    Coming into this project with no prior engineering experience and not having worked on large scale projects 
-                    required learning to keep up to speed with all changes and modifications to the project. 
-                    Additionally, becoming an Assistant Project Manager helped me to gain exposure to working with technical 
-                    documentation and ensuring design safety and ASTM compliance across all subteams.
-                    <br>
-                    Another challenge encountered was in the transitional phase between ideation and creation, and learning how to adapt to rapid changes
-                    in the requirements of our design. For example, early work was put into designing a scissor-lift from scratch, and was later decided 
-                    to be bought off the market instead. This was changed again further into the project going back to fabricating our own. 
+                    <ul><li>Coming into this project with no prior engineering experience and not having worked on large scale projects 
+                        required learning to keep up to speed with all changes and modifications to the project. 
+                        Additionally, becoming an Assistant Project Manager helped me to gain exposure to working with technical 
+                        documentation and ensuring design safety and ASTM compliance across all subteams.</li>
+                        <br>
+                        <li>Another challenge encountered was in the transitional phase between ideation and creation, and learning how to adapt to rapid changes
+                        in the requirements of our design. For example, early work was put into designing a scissor-lift from scratch, and was later decided 
+                        to be bought off the market instead. This was changed again further into the project going back to fabricating our own. </li>
+                    </ul>
+                    
                 </p>
             </div>
             <div class="column card">
                 <h2>Results</h2>
                 <div class="award">
                     <img src="images/rec2606.jpg" alt="Award">
-                    <p class="award-title">2nd Place – Western Division</p>
                 </div>
                 <p>
-                    Created a functional ride. Our ride and documentation package eaned us 2nd Place in the Western Division at the Ride Engineering Competition.
+                    <ul>
+                    <li>Created a functional ride. Our ride and documentation package eaned us <strong>2nd Place in the Western Division</strong> at the Ride Engineering Competition.
                     Our ride was able to maintain continuous operation for 4.5/6 hours during the competition, which includes downtime due to mandatory disassembly
-                    and assembly during the operational period. Co-Authored an 80+ page ASTM F24 Compliance Document and overall documentation package containing a Rider Eligibility Analysis,
-                    Patron Containment Analysis, Service Plan, and Risk Assessment.
+                    and assembly during the operational period. </li>
+                    
+                    <li>Co-Authored an 80+ page ASTM F24 Compliance Document and overall documentation package containing a Rider Eligibility Analysis,
+                    Patron Containment Analysis, Service Plan, and Risk Assessment.</li></ul>
                 </p>
             </div>
         </div>
@@ -345,6 +369,15 @@ function scrollGallery(direction) {
         behavior: "smooth"
     });
 }
+
+const video = document.getElementById("demo-video");
+
+video.addEventListener("timeupdate", () => {
+    if (video.currentTime >= 18 || video.currentTime <= 5) {
+        video.pause();
+        video.currentTime = 5.5; // loops first 15 seconds
+    }
+});
 </script>
 </body>
 </html>
