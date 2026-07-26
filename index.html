@@ -1,93 +1,177 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Zach Teafatiller</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Zach Teafatiller — Mechanical Engineering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Zach Teafatiller — mechanical engineering student at CU Boulder focused on ride systems, robotics, and dynamic mechanisms." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+  <nav id="site-nav">
+    <div class="container bar">
+      <a href="index.html" class="logo">ZT</a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Index</a></li>
+        <li><a href="rec-project.html">REC Project</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    </div>
+  </nav>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Zach Teafatiller</h1>
-						<p>Mechanical Engineering student at the University of Colorado Boulder. <br> Class of 2028.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+  <main>
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Zach Teafatiller</a>
-					</header>
+    <!-- Hero -->
+    <section class="container">
+      <div class="hero">
+        <span class="crop tl"></span><span class="crop tr"></span>
+        <span class="crop bl"></span><span class="crop br"></span>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Portfolio</a></li>
-							<li><a href="rec-project.html">REC Project</a></li>
-						</ul>
-					</nav>
+        <div class="hero-grid">
+          <div>
+            <span class="eyebrow">Mechanical Engineering — CU Boulder</span>
+            <h1>Zach<br>Teafatiller</h1>
+            <p class="tagline">
+              I design and build the mechanisms behind motion — ride systems, robotics,
+              and the structures that carry a load safely, over and over again.
+            </p>
+            <div class="meta-row">
+              <span>CLASS OF 2028</span>
+              <span>FOCUS: RIDE SYSTEMS / ROBOTICS</span>
+              <span>BOULDER, CO</span>
+            </div>
+          </div>
 
-				<!-- Main -->
-				<div id="main">
+          <div class="hero-art" aria-hidden="true">
+            <svg viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
 
-					<!-- Profile Image -->
-					<a href="#" class="image fit"><img src="images/pfp.PNG" alt="" /></a>
+              <!-- track centerline (used to drive vehicle motion) -->
+              <path id="trackPath" class="blueprint-dim"
+                d="M190,110 L410,110 Q450,110 450,150 L450,290 Q450,330 410,330
+                  L190,330 Q150,330 150,290 L150,150 Q150,110 190,110 Z"
+                stroke-dasharray="4 4" fill="none" />
 
-					<!-- About Me -->
-					<article class="post featured">
-						<header class="major">
-							<h2>About Me</h2>
-							<p>
-								Mechanical engineering student interested in robotics, dynamic systems, 
-								and themed entertainment engineering. My work focuses on mechanical design, 
-								fabrication, and motion systems used in ride vehicles and robotic systems.
-							</p>
-							<ul>
-								<li>CU Theme Park Engineering and Design Club - Assistant Project Manager</li>
-								<li>American Society of Mechanical Engineers - Officer</li>
-								<li>American Society for Engineering Management</li>
-							</ul>
-						</header>
-					</article>
+              <!-- track outer edge (the "road") -->
+              <path class="blueprint-line" fill="none" stroke-width="2"
+                d="M190,110 L410,110 Q450,110 450,150 L450,290 Q450,330 410,330
+                  L190,330 Q150,330 150,290 L150,150 Q150,110 190,110 Z" />
 
-					<!-- Projects Section -->
-					<section class="posts">
-						<article>
-							<header>
-								<span class="date">April 2026</span>
-								<h2>
-									<a href="rec-project.html">
-										Ride Engineering Competition - The Sunnyside Scrambler
-									</a>
-								</h2>
-							</header>
-							<a href="rec-project.html" class="image fit">
-								<img src="images/rec2601.jpg" alt="" />
-							</a>
-							<p>
-								Designed and built a small-scale attraction as part of CU’s Theme Park Engineering Club.
-								Click to learn more about the project, design process, and my role.
-							</p>
-						</article>
-					</section>
+              <!-- Scene 01 — top -->
+              <rect class="blueprint-line" x="230" y="30" width="140" height="60" fill="none" />
+              <line class="blueprint-line" x1="300" y1="90" x2="300" y2="110" />
+              <text class="blueprint-label hi" x="300" y="55" text-anchor="middle">SCENE 02</text>
+              <text class="blueprint-label" x="300" y="70" text-anchor="middle">BLACKLIGHT</text>
 
-				</div>
+              <!-- Scene 02 — right -->
+              <rect class="blueprint-line" x="470" y="170" width="110" height="80" fill="none" />
+              <line class="blueprint-line" x1="450" y1="210" x2="470" y2="210" />
+              <text class="blueprint-label hi" x="525" y="205" text-anchor="middle">SCENE 03</text>
+              <text class="blueprint-label" x="525" y="220" text-anchor="middle">FINALE</text>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+              <!-- Scene 03 — left -->
+              <rect class="blueprint-line" x="20" y="170" width="110" height="80" fill="none" />
+              <line class="blueprint-line" x1="150" y1="210" x2="130" y2="210" />
+              <text class="blueprint-label hi" x="75" y="205" text-anchor="middle">SCENE 01</text>
+              <text class="blueprint-label" x="75" y="220" text-anchor="middle">CAVERN DROP</text>
 
-	</body>
+              <!-- Load / unload station -->
+              <rect class="blueprint-line" x="240" y="340" width="120" height="45" fill="none" />
+              <line class="blueprint-line" x1="300" y1="330" x2="300" y2="340" />
+              <text class="blueprint-label" x="300" y="367" text-anchor="middle">LOAD / UNLOAD</text>
+
+              <!-- vehicle 1 -->
+              <rect class="blueprint-car" x="-12" y="-7" width="24" height="14" rx="3">
+                <animateMotion dur="20s" repeatCount="indefinite" rotate="auto" begin="0s">
+                  <mpath href="#trackPath" />
+                </animateMotion>
+              </rect>
+
+              <!-- vehicle 2, half a lap behind -->
+              <rect class="blueprint-car" x="-12" y="-7" width="24" height="14" rx="3">
+                <animateMotion dur="20s" repeatCount="indefinite" rotate="auto" begin="-4s">
+                  <mpath href="#trackPath" />
+                </animateMotion>
+              </rect>
+
+              <rect class="blueprint-car" x="-12" y="-7" width="24" height="14" rx="3">
+                <animateMotion dur="20s" repeatCount="indefinite" rotate="auto" begin="-14s">
+                  <mpath href="#trackPath" />
+                </animateMotion>
+              </rect>
+
+              <!-- callouts -->
+              <text class="blueprint-label" x="20" y="30">TOP VIEW — TRACK SCHEMATIC</text>
+              <text class="blueprint-label" x="20" y="46">TRACK LENGTH: 340'-0"</text>
+              <text class="blueprint-label" x="400" y="360">ASTM F2291 COMPLIANT</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section container" data-reveal>
+      <span class="eyebrow">About</span>
+      <div class="about-grid">
+        <div>
+          <div class="id-photo">
+            <img src="images/pfp.PNG" alt="Portrait of Zach Teafatiller" />
+          </div>
+          <p style="color:var(--paper); font-size:1.05rem; max-width:34rem;">
+            I'm a mechanical engineering student interested in robotics, dynamic systems,
+            and themed entertainment engineering. My work centers on mechanical design,
+            fabrication, and the motion systems behind ride vehicles and robotic
+            mechanisms — from first sketch through a working, load-tested build.
+          </p>
+        </div>
+        <ul class="spec-list">
+          <li><b>01</b> CU Theme Park Engineering &amp; Design Club — Treasurer</li>
+          <li><b>02</b> American Society of Mechanical Engineers — Member</li>
+          <li><b>03</b> American Society for Engineering Management — Member</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Featured project -->
+    <section class="section container" data-reveal>
+      <span class="eyebrow">Featured Build</span>
+      <div class="dim-rule">
+        <span class="tick"></span><span class="line"></span>
+        <span class="label">Projects</span>
+        <span class="line"></span><span class="tick"></span>
+      </div>
+
+      <a href="rec-project.html" class="project-card">
+        <div class="thumb">
+          <img src="images/rec2601.jpg" alt="The Sunnyside Scrambler, fully assembled and themed" />
+        </div>
+        <div class="copy">
+          <span class="date mono">APRIL 2026 — HERSHEY, PA</span>
+          <h3>The Sunnyside Scrambler</h3>
+          <p>
+            A small-scale ride entry built with CU's Theme Park Engineering and Design
+            Club for the Ride Engineering Competition — designed to ASTM F2291 amusement
+            ride safety standards.
+          </p>
+          <span class="link-cta">View project &rarr;</span>
+        </div>
+      </a>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="container row">
+      <p>ZACH TEAFATILLER — MECHANICAL ENGINEERING, CU BOULDER</p>
+      <div class="socials">
+        <a href="mailto:zwteafatiller@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/zach-teafatiller">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
 </html>

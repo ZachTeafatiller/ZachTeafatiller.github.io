@@ -1,384 +1,232 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Sunnyside Scrambler | Zach Teafatiller</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <style>
-        /* Extra styling for project page layout */
-        .hero {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-        .hero img {
-            max-width: 80%;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-        .section {
-            margin: 3rem 0;
-        }
-        .section h2 {
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1rem;
-        }
-        .columns {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-        .column {
-            flex: 1;
-            min-width: 250px;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
-        }
-        .gallery img {
-            width: 100%;
-            border-radius: 8px;
-        }
-        .card {
-            background: #f5f5f5;
-            padding: 1rem;
-            border-radius: 8px;
-        }
-        .imagineering-gallery {
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Track behaves like a curated exhibit strip */
-        .gallery-track {
-            display: flex;
-            overflow: hidden;
-            scroll-behavior: smooth;
-            width: 100%;
-        }
-
-        /* Each “slide” feels like a concept board */
-        .slide {
-            flex: 0 0 100%;
-            box-sizing: border-box;
-
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-
-            padding: 2.5rem;
-
-            min-height: 420px; /* 🔥 key fix */
-            align-items: center;
-        }
-        .caption {
-            overflow-wrap: break-word;
-            word-wrap: break-word;
-            min-width: 0;
-        }
-
-        /* Image styling = polished concept art feel */
-        .slide img {
-            width: 100%;
-            height: 350px;
-            object-fit: contain;
-            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-            padding: 10px;
-            border-radius: 10px;
-        }
-
-        /* Typography = Imagineering report style */
-        .caption h3 {
-            margin: 0 0 0.5rem 0;
-            font-size: 1.4rem;
-            letter-spacing: 0.5px;
-        }
-
-        .caption p {
-            overflow-wrap: break-word;
-            word-break: normal;
-        }
-
-        /* Navigation buttons = subtle, clean, intentional */
-       .imagineering-gallery .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-
-            width: 52px !important;
-            height: 52px !important;
-
-            min-width: 52px !important;
-            min-height: 52px !important;
-
-            padding: 0 !important;
-            margin: 0 !important;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            box-sizing: border-box;
-
-            border-radius: 50% !important;
-
-            background: rgba(255,255,255,0.95);
-            border: 1px solid rgba(0,0,0,0.12);
-
-            font-size: 22px;
-            line-height: 1;
-
-            color: #222;
-
-            cursor: pointer;
-            user-select: none;
-
-            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
-
-            overflow: hidden;
-        }
-
-        .nav-btn:hover {
-            transform: translateY(-50%) scale(1.08);
-            background: #fff;
-            box-shadow: 0 10px 24px rgba(0,0,0,0.18);
-        }
-
-        .nav-btn:active {
-            transform: translateY(-50%) scale(0.98);
-        }
-
-        .nav-btn.left {
-            left: -12px;
-        }
-
-        .nav-btn.right {
-            right: -12px;
-        }
-
-        .award img {
-            width: 100%;
-            height: auto;              /* 🔥 lets it scale naturally */
-            max-height: 500px;         /* optional cap */
-            object-fit: contain;
-
-            display: block;
-            margin: 0 auto 1.5rem auto;
-
-            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-            padding: 20px;
-            border-radius: 12px;
-        }
-
-        .slide video {
-            width: 100%;
-            height: 350px;
-            object-fit: contain;
-            background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
-            padding: 10px;
-            border-radius: 10px;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <title>Sunnyside Scrambler — Zach Teafatiller</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The Sunnyside Scrambler — a Ride Engineering Competition entry built with CU's Theme Park Engineering and Design Club." />
+  <link rel="stylesheet" href="assets/css/main.css" />
 </head>
+<body>
 
-<body class="is-preload">
-
-<div id="wrapper">
-
-    <!-- Header -->
-    <header id="header">
-        <a href="index.html" class="logo">Zach Teafatiller</a>
-    </header>
-
-    <nav id="nav">
-        <ul class="links">
-            <li><a href="index.html">Portfolio</a></li>
-            <li class="active"><a href="#">REC Project</a></li>
-        </ul>
-    </nav>
-
-    <div id="main">
-
-        <!-- Hero -->
-        <div class="hero">
-            <h1>Sunnyside Scrambler</h1>
-            <p>Created a ride entry with CU Theme Park Engineering and Design club for the 2026 Ride Engineering Competition hosted in Hershey Pennsylvania.
-                The ride is a small scale ride for candy riders that is able to have rotation, vertical displacement of 1ft, and achieve 2G's of acceleration.
-                Additionally, the ride is required to meet ASTM F2291 design standards for amusement ride safety.
-            </p>
-            <img src="images/rec2601.jpg" alt="Sunnyside Scrambler Ride">
-        </div>
-
-        <!-- Role & Contributions -->
-        <div class="section columns">
-            <div class="column card">
-                <h2>My Role</h2>
-                <ul>
-                    <li>Assistant Project Manager</li>
-                    <li>Coordinated communication between teams</li>
-                    <li>Prepared design review materials</li>
-                    <li>Co-Authored an 80+ page ASTM F2291 compliance document</li>
-                </ul>
-            </div>
-            <div class="column card">
-                <h2>Engineering Contributions</h2>
-                <ul>
-                    <li>Modified and designed parts witin an 800+ component assembly</li>
-                    <li>Scissor lift and structural design</li>
-                    <li>Control panel box design & fabrication</li>
-                    <li>Ride assembly and troubleshooting</li>
-                    <li>Laser cut and engraved information plates to be mounted to ride and control panel</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Gallery -->
-        <div class="section">
-            <h2>Project Gallery</h2>
-
-            <div class="imagineering-gallery">
-
-                <button class="nav-btn left" onclick="scrollGallery(-1)">‹</button>
-
-                <div class="gallery-track" id="gallery">
-
-                    <div class="slide">
-                        <img src="images/rec2601.jpg" alt="Finished ride">
-                        <div class="caption">
-                            <h3>Final Show Build</h3>
-                            <p>Fully themed ride assembled for competition showcasing motion, lighting, and structural integration.</p>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <video controls id="demo-video">
-                            <source src="images/rec2600.mp4" type="video/mp4">
-                        </video>
-
-                        <div class="caption">
-                            <h3>Ride Motion Demonstration</h3>
-                            <p>Full operational test showing rotation and vertical displacement during continuous operation.</p>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <img src="images/rec2602.png" alt="Ride without theming">
-                        <div class="caption">
-                            <h3>Structural Phase</h3>
-                            <p>Core ride mechanism prior to theming integration and finishing details.</p>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <img src="images/rec2603.png" alt="CAD Screenshot">
-                        <div class="caption">
-                            <h3>Digital Design Development</h3>
-                            <p>Full assembly CAD used for iteration, clearance checks, and compliance validation.</p>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <img src="images/rec2604.jpg" alt="Information Plate">
-                        <div class="caption">
-                            <h3>Maintenance and Ride Information Elements</h3>
-                            <p>Designed signage and information plates fabricated for ride maintenance interaction and ASTM F1193.7 compliance display.</p>
-                        </div>
-                    </div>
-
-                    <div class="slide">
-                        <img src="images/rec2605.jpg" alt="Control Panel">
-                        <div class="caption">
-                            <h3>Operator Control System</h3>
-                            <p>Custom control panel designed for safe ride operation and load/unload coordination.</p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <button class="nav-btn right" onclick="scrollGallery(1)">›</button>
-
-            </div>
-        </div>
-
-        <!-- Challenges & Learning -->
-        <div class="section columns">
-            <div class="column card">
-                <h2>Challenges</h2>
-                <p>
-                    <ul><li>Coming into this project with no prior engineering experience and not having worked on large scale projects 
-                        required learning to keep up to speed with all changes and modifications to the project. 
-                        Additionally, becoming an Assistant Project Manager helped me to gain exposure to working with technical 
-                        documentation and ensuring design safety and ASTM compliance across all subteams.</li>
-                        <br>
-                        <li>Another challenge encountered was in the transitional phase between ideation and creation, and learning how to adapt to rapid changes
-                        in the requirements of our design. For example, early work was put into designing a scissor-lift from scratch, and was later decided 
-                        to be bought off the market instead. This was changed again further into the project going back to fabricating our own. This process helped
-                        me to understand how to be flexible with designs, and not to get attached to early concepts as they will likely change.</li>
-                    </ul>
-                    
-                </p>
-            </div>
-            <div class="column card">
-                <h2>Results</h2>
-                <div class="award">
-                    <img src="images/rec2606.jpg" alt="Award">
-                </div>
-                <p>
-                    <ul>
-                    <li>Created a functional ride. Our ride and documentation package eaned us <strong>2nd Place in the Western Division</strong> at the Ride Engineering Competition.
-                    Our ride was able to maintain continuous operation for 4.5/6 hours during the competition, which includes downtime due to mandatory disassembly
-                    and assembly during the operational period. </li>
-                    
-                    <li>Co-Authored an 80+ page ASTM F24 Compliance Document and overall documentation package containing a Rider Eligibility Analysis,
-                    Patron Containment Analysis, Service Plan, and Risk Assessment.</li></ul>
-                </p>
-            </div>
-        </div>
-
+  <nav id="site-nav">
+    <div class="container bar">
+      <a href="index.html" class="logo">ZT</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Index</a></li>
+        <li><a href="rec-project.html" class="active">REC Project</a></li>
+        <li><a href="resume.html">Resume</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
     </div>
+  </nav>
 
-</div>
+  <main>
 
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script>
-function scrollGallery(direction) {
-    const track = document.getElementById("gallery");
-    const slides = track.querySelectorAll(".slide");
-    const slideWidth = slides[0].getBoundingClientRect().width;
+    <!-- Project hero -->
+    <section class="container proj-hero">
+      <div class="title-block">
+        <span>DWG NO. <b>ZT&#8209;001</b></span>
+        <span>EVENT <b>REC 2026</b></span>
+        <span>REV <b>B</b></span>
+      </div>
+      <h1>Sunnyside Scrambler</h1>
+      <div class="meta-row">
+        <span>APRIL 2026</span>
+        <span>HERSHEY, PA</span>
+        <span>2ND PLACE — WESTERN DIVISION</span>
+      </div>
+      <p class="lede">
+        A ride entry built with CU's Theme Park Engineering and Design Club for the
+        2026 Ride Engineering Competition. The Sunnyside Scrambler is a small-scale
+        candy-themed ride capable of rotation and 1&nbsp;ft of vertical displacement,
+        reaching 2G of acceleration — engineered to meet ASTM F2291 amusement ride
+        safety standards.
+      </p>
+      <div class="cover">
+        <img src="images/rec2601.jpg" alt="The finished Sunnyside Scrambler ride, fully themed" />
+      </div>
+    </section>
 
-    const maxScroll = slideWidth * (slides.length - 1);
-    const current = track.scrollLeft;
+    <!-- Role & contributions -->
+    <section class="section container" data-reveal>
+      <div class="role-grid">
+        <div class="role-card">
+          <span class="eyebrow">Role</span>
+          <ul>
+            <li>Assistant Project Manager</li>
+            <li>Coordinated communication between subteams</li>
+            <li>Prepared design review materials</li>
+            <li>Co-authored an 80+ page ASTM F2291 compliance document</li>
+          </ul>
+        </div>
+        <div class="role-card">
+          <span class="eyebrow">Engineering Scope</span>
+          <ul>
+            <li>Modified and designed parts within an 800+ component assembly</li>
+            <li>Scissor lift and structural design</li>
+            <li>Control panel box design &amp; fabrication</li>
+            <li>Ride assembly and troubleshooting</li>
+            <li>Laser-cut and engraved information plates for the ride and control panel</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-    let next = current + direction * slideWidth;
+    <!-- Gallery -->
+    <section class="section container" data-reveal>
+      <span class="eyebrow">Project Gallery</span>
+      <div class="dim-rule">
+        <span class="tick"></span><span class="line"></span>
+        <span class="label">06 Records</span>
+        <span class="line"></span><span class="tick"></span>
+      </div>
 
-    // LOOP LOGIC
-    if (next < 0) {
-        next = maxScroll;
-    } 
-    else if (next > maxScroll) {
-        next = 0;
-    }
+      <div class="gallery" data-gallery>
+        <div class="gallery-frame">
+          <div class="gallery-track">
 
-    track.scrollTo({
-        left: next,
-        behavior: "smooth"
-    });
-}
+            <div class="slide">
+              <div class="media"><img src="images/rec2601.jpg" alt="Finished ride, fully assembled"></div>
+              <div class="caption">
+                <span class="idx mono">RECORD 01</span>
+                <h3>Final Show Build</h3>
+                <p>Fully themed ride assembled for competition, showcasing motion, lighting, and structural integration.</p>
+              </div>
+            </div>
 
-const video = document.getElementById("demo-video");
+            <div class="slide">
+              <div class="media">
+                <video controls preload="metadata">
+                  <source src="images/rec2600.mp4" type="video/mp4">
+                </video>
+              </div>
+              <div class="caption">
+                <span class="idx mono">RECORD 02</span>
+                <h3>Ride Motion Demonstration</h3>
+                <p>Full operational test showing rotation and vertical displacement during continuous operation.</p>
+              </div>
+            </div>
 
-video.addEventListener("timeupdate", () => {
-    if (video.currentTime >= 18 || video.currentTime <= 5) {
-        video.pause();
-        video.currentTime = 5.5; // loops first 15 seconds
-    }
-});
-</script>
+            <div class="slide">
+              <div class="media"><img src="images/rec2602.png" alt="Ride mechanism before theming"></div>
+              <div class="caption">
+                <span class="idx mono">RECORD 03</span>
+                <h3>Structural Phase</h3>
+                <p>Core ride mechanism prior to theming integration and finishing details.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="media"><img src="images/rec2603.png" alt="Full assembly CAD screenshot"></div>
+              <div class="caption">
+                <span class="idx mono">RECORD 04</span>
+                <h3>Digital Design Development</h3>
+                <p>Full assembly CAD used for iteration, clearance checks, and compliance validation.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="media"><img src="images/rec2604.jpg" alt="Ride information plate"></div>
+              <div class="caption">
+                <span class="idx mono">RECORD 05</span>
+                <h3>Maintenance &amp; Information Plates</h3>
+                <p>Signage and information plates fabricated for ride maintenance and ASTM F1193.7 compliance display.</p>
+              </div>
+            </div>
+
+            <div class="slide">
+              <div class="media"><img src="images/rec2605.jpg" alt="Control panel"></div>
+              <div class="caption">
+                <span class="idx mono">RECORD 06</span>
+                <h3>Operator Control System</h3>
+                <p>Custom control panel designed for safe ride operation and load/unload coordination.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="gallery-controls">
+          <span class="counter mono">01 / 06</span>
+          <div class="buttons">
+            <button class="nav-btn prev" aria-label="Previous slide">&lsaquo;</button>
+            <button class="nav-btn next" aria-label="Next slide">&rsaquo;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Challenges & Results -->
+    <section class="section container" data-reveal>
+      <div class="split-2">
+        <div class="panel">
+          <span class="eyebrow">Challenges</span>
+          <ul>
+            <li>
+              Coming into this project with no prior engineering experience, and never
+              having worked on a large-scale build, meant staying current with constant
+              changes across every subteam. Stepping into the Assistant Project Manager
+              role added exposure to technical documentation and to keeping design
+              safety and ASTM compliance consistent across the whole team.
+            </li>
+            <li>
+              Adapting between ideation and creation was its own lesson. Early work went
+              into designing a scissor lift from scratch, which was later dropped in
+              favor of buying one off the market — then reversed again later in the
+              project back to an in-house build. That back-and-forth taught me to stay
+              flexible with designs rather than get attached to early concepts, since
+              they're likely to change.
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel">
+          <span class="eyebrow">Results</span>
+          <div class="award-frame">
+            <img src="images/rec2606.jpg" alt="Ride Engineering Competition award">
+          </div>
+          <p>
+            The finished ride and documentation package earned <strong>2nd place in the
+            Western Division</strong> at the Ride Engineering Competition, maintaining
+            continuous operation for 4.5 of 6 hours during competition — including
+            downtime for mandatory disassembly and reassembly.
+          </p>
+          <p>
+            Co-authored an 80+ page ASTM F2291 compliance document and full
+            documentation package, including a Rider Eligibility Analysis, Patron
+            Containment Analysis, Service Plan, and Risk Assessment.
+          </p>
+          <div class="stat-row">
+            <div class="stat-tile">
+              <span class="num mono">2ND</span>
+              <span class="label">Western Division</span>
+            </div>
+            <div class="stat-tile">
+              <span class="num mono">4.5/6</span>
+              <span class="label">Hrs Continuous Op.</span>
+            </div>
+            <div class="stat-tile">
+              <span class="num mono">80+</span>
+              <span class="label">Pg. Compliance Doc.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="site-footer">
+    <div class="container row">
+      <p>ZACH TEAFATILLER — MECHANICAL ENGINEERING, CU BOULDER</p>
+      <div class="socials">
+        <a href="mailto:zwteafatiller@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/zach-teafatiller">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
